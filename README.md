@@ -155,7 +155,7 @@ git checkout -b feat/trigger-ci
 We need to change a file under `envs/dev/` or `modules/` to trigger the workflow (path filtering). Let's add a comment to the main Terraform configuration:
 
 ```bash
-code /d01/MyWork/1/K8s/ZENPHARMA/infra/envs/dev/main.tf
+code /d01/MyWork/1/K8s/MySchool2091/infra/envs/dev/main.tf
 ```
 
 Add a comment at the top of the file:
