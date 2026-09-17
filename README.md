@@ -9,7 +9,7 @@ Right now, anyone can push directly to `main`, which triggers an immediate apply
 
 ### Step 1: Protect the Main Branch
 
-1. Go to your infra repository: `https://github.com/<your-username>/infra`
+1. Go to your infra repository: `https://github.com/MySchool2091/infra`
 2. Click **Settings**
 3. In the left sidebar, click **Branches** (under "Code and automation")
 4. Click **Add branch ruleset** (or **Add classic branch protection rule** if rulesets aren't available)
