@@ -146,7 +146,7 @@ Now let's test the full workflow by pushing a change through the CI pipeline.
 Since we enabled branch protection, we can no longer push directly to `main`. All changes must go through a pull request.
 
 ```bash
-cd /d01/MyWork/1/K8s/ZENPHARMA/infra
+cd /d01/MyWork/1/K8s/MySchool2091/infra
 git checkout -b feat/trigger-ci
 ```
 
@@ -155,7 +155,7 @@ git checkout -b feat/trigger-ci
 We need to change a file under `envs/dev/` or `modules/` to trigger the workflow (path filtering). Let's add a comment to the main Terraform configuration:
 
 ```bash
-code /d01/MyWork/1/K8s/ZENPHARMA/infra/envs/dev/main.tf
+code /d01/MyWork/1/K8s/MySchool2091/infra/envs/dev/main.tf
 ```
 
 Add a comment at the top of the file:
@@ -163,7 +163,7 @@ Add a comment at the top of the file:
 ```hcl
 # ZenPharma Dev Environment — managed via GitHub Actions CI/CD
 locals {
-  project = "pharma"
+  project = "my-school"
   env     = "dev"
   region  = "ap-southeast-2"
 }
@@ -173,7 +173,7 @@ locals {
 ### Step 3: Commit and Push the Feature Branch
 
 ```bash
-cd /d01/MyWork/1/K8s/ZENPHARMA/infra
+cd /d01/MyWork/1/K8s/MySchool2091/infra
 git add envs/dev/main.tf
 git commit -m "ci: trigger initial CI pipeline run"
 git push origin feat/trigger-ci
