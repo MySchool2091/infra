@@ -147,6 +147,11 @@ Since we enabled branch protection, we can no longer push directly to `main`. Al
 
 ```bash
 cd /d01/MyWork/1/K8s/MySchool2091/infra
+git status
+git switch main 
+git pull
+git branch -D feat/setup
+
 git checkout -b feat/trigger-ci
 ```
 
