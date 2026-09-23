@@ -1,3 +1,9 @@
+# This Terraform configuration file is used to create an AWS RDS instance with a security group. 
+# The configuration supports both MySQL and PostgreSQL engines, but the MySQL configuration is currently commented out. 
+# The security group allows ingress traffic from EKS worker nodes on the respective database port (3306 for MySQL and 5432 for PostgreSQL) 
+# and allows all egress traffic. The RDS instance is configured with various parameters such as engine version, instance class, allocated storage, 
+# and backup settings. Tags are also applied for identification and management purposes.
+/*
 resource "aws_security_group" "rds" {
   name        = "${var.project}-${var.env}-rds-sg"
   description = "Security group for RDS MySQL instance"
@@ -65,8 +71,9 @@ module "rds" {
     Env     = var.env
   }
 }
+*/
 # PostgreSQL configuration is commented out for now, but can be used if needed in the future.
-/*
+
 resource "aws_security_group" "rds" {
   name        = "${var.project}-${var.env}-rds-sg"
   description = "Security group for RDS PostgreSQL instance"
@@ -133,4 +140,3 @@ module "rds" {
     Env     = var.env
   }
 }
-*/
