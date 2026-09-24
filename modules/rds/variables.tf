@@ -26,7 +26,7 @@ variable "eks_node_security_group_id" {
 variable "db_name" {
   description = "Name of the database to create"
   type        = string
-  default     = "MRPSKP"
+  default     = "pharmadb"
 }
 
 variable "username" {
