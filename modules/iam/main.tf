@@ -237,6 +237,7 @@ resource "aws_iam_policy" "alb_controller_policy" {
           "elasticloadbalancing:SetIpAddressType",
           "elasticloadbalancing:SetSecurityGroups",
           "elasticloadbalancing:SetSubnets",
+          "elasticloadbalancing:SetRulePriorities",
           "elasticloadbalancing:DeleteLoadBalancer",
           "elasticloadbalancing:ModifyTargetGroup",
           "elasticloadbalancing:ModifyTargetGroupAttributes",
