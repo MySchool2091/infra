@@ -24,6 +24,12 @@ variable "kubernetes_version" {
   default     = "1.35"
 }
 
+variable "node_group_kubernetes_version" {
+  description = "Kubernetes version for the EKS node group"
+  type        = string
+  default     = "1.35"
+}
+
 variable "instance_types" {
   description = "EC2 instance types for the node group"
   type        = list(string)
