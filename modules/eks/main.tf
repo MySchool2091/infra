@@ -16,16 +16,18 @@ module "eks" {
 
   addons = {
     vpc-cni = {
-      most_recent    = true
+      addon_version = "v1.23.2-eksbuild.10"
+      # most_recent    = true
       before_compute = true
     }
-    kube-proxy             = { most_recent = true }
-    coredns                = { most_recent = true }
-    eks-pod-identity-agent = { most_recent = true }
+    kube-proxy             = { addon_version = "v1.35.3-eksbuild.64" } # { most_recent = true }
+    coredns                = { addon_version = "v1.13.2-eksbuild.62" } # { most_recent = true }
+    eks-pod-identity-agent = { addon_version = "v1.0.0-eksbuild.1" } # { most_recent = true }
   }
 
   eks_managed_node_groups = {
     main = {
+      kubernetes_version = var.node_group_kubernetes_version
       instance_types = var.instance_types
       min_size       = var.min_size
       max_size       = var.max_size
