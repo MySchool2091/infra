@@ -22,7 +22,7 @@ module "eks" {
     }
     kube-proxy             = { addon_version = "v1.35.3-eksbuild.64" } # { most_recent = true }
     coredns                = { addon_version = "v1.13.2-eksbuild.62" } # { most_recent = true }
-    eks-pod-identity-agent = { addon_version = "v1.0.0-eksbuild.1" } # { most_recent = true }
+    eks-pod-identity-agent = { addon_version = "v1.4.1-eksbuild.2" } # { most_recent = true }
   }
 
   eks_managed_node_groups = {
