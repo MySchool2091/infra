@@ -20,9 +20,12 @@ module "eks" {
       # most_recent    = true
       before_compute = true
     }
-    kube-proxy             = { addon_version = "v1.35.3-eksbuild.64" } # { most_recent = true }
+    kube-proxy             = { addon_version = "v1.36.0-eksbuild.65" } # { most_recent = true }
     coredns                = { addon_version = "v1.13.2-eksbuild.62" } # { most_recent = true }
     eks-pod-identity-agent = { addon_version = "v1.4.1-eksbuild.2" } # { most_recent = true }
+    aws-ebs-csi-driver     = { addon_version = "v1.61.1-eksbuild.1"}
+    
+
   }
 
   eks_managed_node_groups = {
