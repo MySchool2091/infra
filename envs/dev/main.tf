@@ -21,16 +21,16 @@ module "vpc" {
 module "eks" {
   source = "../../modules/eks"
 
-  project            = local.project
-  env                = local.env
-  vpc_id             = module.vpc.vpc_id
-  subnet_ids         = module.vpc.private_subnets
-  kubernetes_version = "1.35"
-  node_group_kubernetes_version = "1.35"
-  instance_types     = ["t3.medium"]
-  min_size           = 1
-  max_size           = 3
-  desired_size       = 2
+  project                       = local.project
+  env                           = local.env
+  vpc_id                        = module.vpc.vpc_id
+  subnet_ids                    = module.vpc.private_subnets
+  kubernetes_version            = "1.36"
+  node_group_kubernetes_version = "1.36"
+  instance_types                = ["t3.medium"]
+  min_size                      = 1
+  max_size                      = 3
+  desired_size                  = 2
 }
 
 module "rds" {
