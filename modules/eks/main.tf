@@ -23,7 +23,7 @@ module "eks" {
     kube-proxy             = { addon_version = "v1.36.0-eksbuild.65" } # { most_recent = true }
     coredns                = { addon_version = "v1.13.2-eksbuild.62" } # { most_recent = true }
     eks-pod-identity-agent = { addon_version = "v1.4.1-eksbuild.2" } # { most_recent = true }
-    aws-ebs-csi-driver     = { addon_version = "v1.61.1-eksbuild.1"}
+    #aws-ebs-csi-driver     = { addon_version = "v1.61.1-eksbuild.1"}
     
 
   }
